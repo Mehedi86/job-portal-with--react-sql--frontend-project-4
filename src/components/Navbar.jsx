@@ -6,7 +6,6 @@ import AuthContext from "../context/AuthContext";
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
-    console.log(user)
 
     const handleLogout = () => {
         localStorage.setItem("user", JSON.stringify(null));
@@ -42,6 +41,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/jobs">Jobs</Link>
                         </li>
+                        {user?.role == 'employer' && <li className="nav-item">
+                            <Link to="/postJob" className="nav-link">Post a Job</Link>
+                        </li>}
                         {user && <li className="nav-item">
                             <Link className="nav-link" to="/dashboard">Dashboard</Link>
                         </li>}

@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
+import PostJob from "../pages/PostJob";
 
 export const router = createBrowserRouter([
     {
@@ -26,9 +27,14 @@ export const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register/>
-            },{
+            },
+            {
                 path: '/dashboard',
                 element: <PrivateRoute><Dashboard/></PrivateRoute>
+            },
+            {
+                path: '/postJob',
+                element: <PrivateRoute><PostJob/></PrivateRoute>
             }
         ]
     }

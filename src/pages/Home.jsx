@@ -15,7 +15,7 @@ const Home = () => {
                     <p>Want to post a job Advertise !!</p>
                 </div>
                 <div className="w-100 text-center">
-                    <Link to="/jobs" className="btn btn-danger">Let's Go</Link>
+                    <Link to="/postJob" className="btn btn-danger">Let's Go</Link>
                 </div>
             </div>)
     }
