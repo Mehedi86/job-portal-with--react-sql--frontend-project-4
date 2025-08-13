@@ -17,7 +17,7 @@ const Register = () => {
       email,
       password,
       role,
-      email_verified: 1, // static
+      email_verified: 1, 
     };
 
     try {
