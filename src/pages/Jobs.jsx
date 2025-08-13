@@ -17,12 +17,13 @@ const Jobs = () => {
       <h2 className="text-center mb-4">Available Jobs</h2>
       <div className="row g-4">
         {jobs.map((job) => (
-          <div key={job.id} className="col-12 col-sm-6 col-lg-4 d-flex">
+          <div key={job.id} className="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
             <JobCards job={job} />
           </div>
         ))}
       </div>
     </div>
+
   );
 };
 

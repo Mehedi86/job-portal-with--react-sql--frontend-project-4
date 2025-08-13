@@ -1,0 +1,4 @@
+.job-card {
+  width: 300px; /* fixed width */
+  margin: 0 auto; /* center if needed */
+}
