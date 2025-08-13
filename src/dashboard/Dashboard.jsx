@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+import EmployerDashboard from "./EmployerDashboard";
+import JobseekerDashboard from "./JobseekerDashboard";
 
 
 const Dashboard = () => {
+    const {user} = useContext(AuthContext);
 
-    return (
-        <div className="container mt-5">
-            this is dashboard
-        </div>
-    );
+    if(user?.role == 'employer'){
+        return <EmployerDashboard/>
+    }
+    else{
+        return <JobseekerDashboard/>
+    }
 };
 
 export default Dashboard;

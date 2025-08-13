@@ -42,9 +42,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/jobs">Jobs</Link>
                         </li>
-                        <li className="nav-item">
+                        {user && <li className="nav-item">
                             <Link className="nav-link" to="/dashboard">Dashboard</Link>
-                        </li>
+                        </li>}
                     </ul>
 
                     {/* Auth Buttons */}

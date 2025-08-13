@@ -1,13 +1,13 @@
 import React from "react";
 
 
-const JobseekerDashboard = () => {
+const EmployerDashboard = () => {
 
     return (
         <div className="container mt-5">
-            this is jobseekerDashboard
+            this is employerDashboard
         </div>
     );
 };
 
-export default JobseekerDashboard;
+export default EmployerDashboard;
