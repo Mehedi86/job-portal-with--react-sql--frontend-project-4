@@ -18,17 +18,17 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/jobs',
-                element: <Jobs />
-            }, {
+                element: <Jobs/>
+            },{
                 path: '/login',
-                element: <Login />
+                element: <Login/>
             },
             {
                 path: '/register',
-                element: <Register />
-            }, {
+                element: <Register/>
+            },{
                 path: '/dashboard',
-                element: <PrivateRoute><Dashboard /></PrivateRoute>
+                element: <PrivateRoute><Dashboard/></PrivateRoute>
             }
         ]
     }
