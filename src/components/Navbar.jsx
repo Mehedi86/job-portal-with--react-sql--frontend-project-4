@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 
 const Navbar = () => {
-    const {user} = useContext(AuthContext);
+    const { user, logout } = useContext(AuthContext);
     console.log(user)
+
     const handleLogout = () => {
-        localStorage.setItem("user", JSON.stringify({}));
+        localStorage.setItem("user", JSON.stringify(null));
+        logout();
     }
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
@@ -47,15 +49,14 @@ const Navbar = () => {
 
                     {/* Auth Buttons */}
                     <div className="d-flex ms-lg-3 mt-2 mt-lg-0">
-                        <Link to="/login" className="btn btn-outline-light me-2">
+                        {user ? <button onClick={handleLogout} className="btn btn-warning">
+                            Logout
+                        </button> : (<> <Link to="/login" className="btn btn-outline-light me-2">
                             Login
                         </Link>
-                        <Link to="/register" className="btn btn-warning">
-                            Register
-                        </Link>
-                        <button onClick={handleLogout} className="btn btn-warning">
-                            Logout
-                        </button>
+                            <Link to="/register" className="btn btn-warning">
+                                Register
+                            </Link></>)}
                     </div>
                 </div>
             </div>
