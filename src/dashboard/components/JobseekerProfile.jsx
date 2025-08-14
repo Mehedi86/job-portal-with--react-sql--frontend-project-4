@@ -4,6 +4,7 @@ import AuthContext from "../../context/AuthContext";
 const JobseekerProfile = () => {
   const { user } = useContext(AuthContext);
   const [profile, setProfile] = useState(null);
+  console.log(profile)
 
   useEffect(() => {
     if (!user?.id) return; // Prevent fetch if user is null
@@ -32,14 +33,14 @@ const JobseekerProfile = () => {
 
   if (Object.keys(profile).length === 0) {
     return (
-      <div className="container mt-5">
+      <div className="container mt-3">
         <p>No profile found. Please create one.</p>
       </div>
     );
   }
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-4">
       <h3 className="mb-4">Jobseeker Profile</h3>
       <div className="card p-3 shadow-sm">
         <p><strong>Address:</strong> {profile.address}</p>

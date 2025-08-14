@@ -35,6 +35,11 @@ const Navbar = () => {
                 {/* Nav Items */}
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
+                        {user && <li className="nav-item d-flex align-items-center">
+                            <span className="nav-link px-3 py-1 bg-light rounded shadow-sm fw-medium text-dark">
+                                {user?.name}
+                            </span>
+                        </li>}
                         <li className="nav-item">
                             <Link className="nav-link" to="/">Home</Link>
                         </li>
