@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import AuthContext from "../../context/AuthContext";
+import toast from "react-hot-toast";
 
 const EditProfile = () => {
   const { user } = useContext(AuthContext);
@@ -52,7 +53,7 @@ const EditProfile = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        alert("Profile updated successfully!");
+        toast.success("Profile updated successfully!");
       })
       .catch((err) => console.error("Error updating profile:", err));
   };
