@@ -85,7 +85,7 @@ const JobseekerDashboard = () => {
         )}
 
         {/* Main Content */}
-        <div className="flex-grow-1 px-4">
+        <div className="flex-grow-1 px-4 pb-4">
           {loadPage === "profile" && <JobseekerProfile />}
           {loadPage === "editProfile" && <EditProfile />}
           {loadPage === "appliedJobs" && <AppliedJobs />}
