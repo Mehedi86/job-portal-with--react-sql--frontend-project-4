@@ -1,23 +1,19 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import AuthContext from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({ children }) => {
-  const { user } = useContext(AuthContext);
-  const navigate = useNavigate();
+  const { user, loading } = useContext(AuthContext);
 
-  useEffect(() => {
-    if (!user) {
-      navigate("/login");
-    }
-  }, [user, navigate]);
-
-  if (!user) {
-    // You can return null or a loader until navigation happens
-    return null;
+  if (loading) {
+    return <p>Please wait...</p>; // show a loader while checking auth
   }
 
-  return children;
+  if (!user) {
+    return <Navigate to="/login" replace />; // redirect if not logged in
+  }
+
+  return children; // render protected content if user exists
 };
 
 export default PrivateRoute;

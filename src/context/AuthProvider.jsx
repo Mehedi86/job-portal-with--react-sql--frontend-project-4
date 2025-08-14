@@ -3,12 +3,13 @@ import AuthContext from "./AuthContext";
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     try {
       const retrieveUser = localStorage.getItem("user");
       if (retrieveUser) {
+        setLoading(false)
         setUser(JSON.parse(retrieveUser));
       }
     } catch (err) {
@@ -27,6 +28,8 @@ const AuthProvider = ({ children }) => {
     user,
     setUser,
     logout,
+    loading,
+    setLoading
   };
 
   return (

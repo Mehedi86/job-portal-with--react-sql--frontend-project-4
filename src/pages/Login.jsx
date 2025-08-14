@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 
 const Login = () => {
-    const { setUser, user } = useContext(AuthContext)
+    const { setUser, user, setLoading } = useContext(AuthContext)
     const navigate = useNavigate()
 
     const handleLogin = (event) => {
@@ -29,7 +29,8 @@ const Login = () => {
                 localStorage.setItem("user", JSON.stringify(data));
                 setUser(data);
                 toast.success("Login successful!");
-                navigate('/')
+                navigate('/');
+                setLoading(false)
             })
             .catch(() => toast.error("Something went wrong!"));
     };

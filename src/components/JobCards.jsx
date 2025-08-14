@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const JobCards = ({ job }) => {
-  const { category, created_at, description, location, status, title } = job;
+  const { category, created_at, description, location, status, title, company } = job;
 
   return (
     <div className="card shadow-lg border-0 h-100 job-card">
@@ -20,6 +20,7 @@ const JobCards = ({ job }) => {
 
         {/* Description */}
         <p className="card-text text-muted">{description}</p>
+        <h6>Company: {company}</h6>
 
         {/* Location & Date */}
         <div className="d-flex justify-content-between align-items-center text-muted small">
