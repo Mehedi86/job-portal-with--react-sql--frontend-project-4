@@ -43,9 +43,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/">Home</Link>
                         </li>
-                        <li className="nav-item">
+                       {user?.role == 'jobseeker' &&  <li className="nav-item">
                             <Link className="nav-link" to="/jobs">Jobs</Link>
-                        </li>
+                        </li>}
                         {user?.role == 'employer' && <li className="nav-item">
                             <Link to="/postJob" className="nav-link">Post a Job</Link>
                         </li>}

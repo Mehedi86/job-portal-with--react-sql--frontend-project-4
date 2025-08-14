@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import PostedJobs from "./components/PostedJobs";
 import ManageJobs from "./components/ManageJobs";
+import JobApplications from "./components/JobApplications";
 
 const EmployerDashboard = () => {
     const [loadPage, setLoadPage] = useState("postedJobs");
@@ -66,14 +67,21 @@ const EmployerDashboard = () => {
                             >
                                 Manage Jobs
                             </button>
+                            <button
+                                onClick={() => handleNavClick("applications")}
+                                className="btn bg-dark text-start text-white"
+                            >
+                                Job Applications
+                            </button>
                         </nav>
                     </div>
                 )}
 
                 {/* Main Content */}
-                <div className="flex-grow-1 px-4">
+                <div className="flex-grow-1 px-4 pb-4">
                     {loadPage === "postedJobs" && <PostedJobs />}
                     {loadPage === "manageJobs" && <ManageJobs />}
+                    {loadPage === "applications" && <JobApplications />}
                 </div>
             </div>
         </div>
