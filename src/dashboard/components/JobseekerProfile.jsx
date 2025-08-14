@@ -4,7 +4,7 @@ import AuthContext from "../../context/AuthContext";
 const JobseekerProfile = () => {
   const { user } = useContext(AuthContext);
   const [profile, setProfile] = useState(null);
-  console.log(profile)
+  
 
   useEffect(() => {
     if (!user?.id) return; // Prevent fetch if user is null
