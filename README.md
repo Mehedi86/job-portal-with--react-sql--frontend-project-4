@@ -1,12 +1,21 @@
-# React + Vite
+## Project Name
+- Job Portal Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Stack
 
-Currently, two official plugins are available:
+- React, SQL, Express
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup Guide
 
-## Expanding the ESLint configuration
+- open cmd and command 'git clone https://github.com/Mehedi86/job-portal-with--react-sql--frontend-project-4.git'
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- after open this on vs code, write in terminal npm istall all dependencies and setup environment;
+
+- then run the project by 'npm run dev' command.
+
+## Features
+
+- Employee can register their account, login, post jobs, see which candidate apply to the job in the dashboard. Manage the job;
+
+- Job seekers  can also register themselves as jobseeker and can apply to the job and create, edit theit profile and see which job they apply;
+
