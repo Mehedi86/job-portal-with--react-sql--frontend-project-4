@@ -1,8 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 const JobCards = ({ job }) => {
-  const { category, created_at, description, location, status, title, company } = job;
+  const { category, created_at, description, location, status, title, company, id } = job;
 
   return (
     <div className="card shadow-lg border-0 h-100 job-card">
@@ -32,7 +33,7 @@ const JobCards = ({ job }) => {
 
         {/* Apply Button */}
         <div className="mt-3">
-          <button className="btn btn-outline-primary btn-sm w-100">Apply Now</button>
+          <Link to={`/job-details/${id}`} className="btn btn-outline-primary btn-sm w-100">Apply Now</Link>
         </div>
       </div>
     </div>
