@@ -72,7 +72,7 @@ const JobseekerDashboard = () => {
                 onClick={() => handleNavClick("editProfile")}
                 className="btn bg-dark text-start text-white"
               >
-                Edit Profile
+                Add/Edit Profile
               </button>
               <button
                 onClick={() => handleNavClick("appliedJobs")}
